@@ -39,15 +39,15 @@ main section {
 /* navbar starts here */
 .header {
   background: #fff8f3;
-  background-image: url("images/header_bg.png");
+  background-image: url("images/header_bg.png"), url("images/developer.png");
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: bottom right, top left;
 }
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 225px;
+  margin: 0 220px;
 }
 .nav-logo {
   color: #181818;
@@ -77,14 +77,15 @@ nav li {
 /* navbar ends here */
 /* banner starts here */
 .banner-container {
-  padding: 30px 30px 0px 225px;
+  margin: 30px 30px 0 200px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .banner-photo {
-  width: 500px;
-  transform: translateY(px);
+  width: 550px;
+  display: block;
 }
 .banner-greeting {
   color: #474747;
@@ -250,7 +251,59 @@ textarea {
 .footer-btn {
   padding: 10px 25px;
 }
-.social-links a{
+.social-links a {
   margin-right: 25px;
 }
 /* footer ends here */
+
+.hide {
+  display: none;
+}
+
+/* media query */
+@media screen and (max-width: 576px) {
+  nav,
+  ul,
+  .skill-container,
+  .resume-container,
+  .about-info-container,
+  .banner-container,
+  footer {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin-bottom: 5px;
+  }
+
+  .what-i-do-description,
+  .about-section,
+  footer {
+    padding: 10px;
+  }
+  .header {
+    background-image: none;
+  }
+  .banner-container {
+    margin: 20px;
+  }
+  .banner-photo {
+    width: 50%;
+    float: right;
+  }
+  .btn-primary {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .logo-btn {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 5px 20px;
+    margin-bottom: 0;
+  }
+
+  .footer-colums {
+    width: 85%;
+  }
+}
